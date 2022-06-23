@@ -16,7 +16,7 @@ fun Navigation() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = NavRoutes.SplashScreen.route) {
         composable(route = NavRoutes.SplashScreen.route) {
-            SplashScreen()
+            SplashScreen(navController)
         }
     }
 }
