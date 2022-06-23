@@ -1,6 +1,15 @@
 buildscript {
     ext {
         compose_version = '1.1.1'
+        common_libraries = [
+                "androidx.activity:activity-compose:1.4.0",
+                "androidx.compose.ui:ui-test-junit4:$compose_version",
+                "androidx.compose.ui:ui-tooling:$compose_version",
+                "androidx.compose.ui:ui:$compose_version",
+                "androidx.compose.material:material:$compose_version",
+                "androidx.compose.ui:ui-tooling-preview:$compose_version",
+                "androidx.navigation:navigation-compose:2.4.2"
+        ]
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {
