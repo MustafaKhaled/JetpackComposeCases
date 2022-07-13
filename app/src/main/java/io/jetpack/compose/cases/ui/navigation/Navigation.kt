@@ -4,7 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import io.jetpack.compose.splashscreen.SplashScreen
+import io.jetpack.compose.cases.ui.casesList.CasesListScreen
+import io.jetpack.compose.cases.ui.casesList.casesList
+import io.jetpack.compose.cases.ui.splashscreen.SplashScreen
 
 /**
  * Created by mustafakhaled on 23,June,2022
@@ -17,6 +19,10 @@ fun Navigation() {
     NavHost(navController = navController, startDestination = NavRoutes.SplashScreen.route) {
         composable(route = NavRoutes.SplashScreen.route) {
             SplashScreen(navController)
+        }
+        composable(route = NavRoutes.CasesListScreen.route) {
+            val cases = casesList
+            CasesListScreen(navController, cases)
         }
     }
 }

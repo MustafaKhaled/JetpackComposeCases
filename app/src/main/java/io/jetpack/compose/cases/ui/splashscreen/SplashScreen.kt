@@ -1,4 +1,4 @@
-package io.jetpack.compose.splashscreen
+package io.jetpack.compose.cases.ui.splashscreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
@@ -20,13 +20,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewParameter
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import androidx.navigation.NavHostController
 import com.google.accompanist.systemuicontroller.SystemUiController
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import io.jetpack.compose.cases.R.*
+import io.jetpack.compose.cases.ui.navigation.NavRoutes
+import io.jetpack.compose.extensions.navigateNextScreen
 import kotlinx.coroutines.delay
 
 /**
@@ -52,7 +53,7 @@ fun SplashScreen(navController: NavController? = null) {
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(
-                painter = painterResource(R.mipmap.ic_launcher_foreground),
+                painter = painterResource(mipmap.ic_launcher_foreground),
                 contentDescription = ""
             )
             Spacer(modifier = Modifier.height(32.dp))
@@ -69,6 +70,7 @@ fun SplashScreen(navController: NavController? = null) {
 
     LaunchedEffect(true) {
         delay(3000)
+        navController?.navigateNextScreen(NavRoutes.CasesListScreen.route)
     }
 }
 
