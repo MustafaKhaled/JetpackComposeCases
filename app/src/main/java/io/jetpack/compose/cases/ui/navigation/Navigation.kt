@@ -5,7 +5,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import io.jetpack.compose.cases.ui.casesList.CasesListScreen
-import io.jetpack.compose.splashscreen.SplashScreen
+import io.jetpack.compose.cases.ui.casesList.casesList
+import io.jetpack.compose.cases.ui.splashscreen.SplashScreen
 
 /**
  * Created by mustafakhaled on 23,June,2022
@@ -20,7 +21,8 @@ fun Navigation() {
             SplashScreen(navController)
         }
         composable(route = NavRoutes.CasesListScreen.route) {
-            CasesListScreen(navController)
+            val cases = casesList
+            CasesListScreen(navController, cases)
         }
     }
 }
