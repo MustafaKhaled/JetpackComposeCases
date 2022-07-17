@@ -130,6 +130,9 @@ You should add your ```README.md``` file in your module from this template.
 After following steps of **How to contribute?**, create pull request from your forked repo to develop branch of the original repo.
 Once your PR is accepted, your case would be listed in the project, and your name will be added as an author section below.
 
+# Cases
+[Single Permission](https://github.com/MustafaKhaled/JetpackComposeCases/tree/develop/RequestPermissionScreen)
+
 # Authors
 
 List of contributors: 
