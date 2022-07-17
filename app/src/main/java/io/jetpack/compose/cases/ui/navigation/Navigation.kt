@@ -26,7 +26,7 @@ fun Navigation() {
             CasesListScreen(navController, cases)
         }
         composable(route = NavRoutes.RequestPermissionScreen.route) {
-            SinglePermissionScreen(navController)
+            SinglePermissionScreen()
         }
     }
 }
