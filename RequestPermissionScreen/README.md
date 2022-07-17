@@ -18,3 +18,5 @@ implementation 'com.google.accompanist:accompanist-permissions:0.21.1-beta'
 - Populate bitmap from captured photo
 
 
+# Screenshots
+<img src="https://user-images.githubusercontent.com/25938149/179379540-e2dd5525-b588-4c2c-8425-8d4cf33341c2.png"  height="350" width="150/>
