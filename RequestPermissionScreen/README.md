@@ -20,7 +20,3 @@ implementation 'com.google.accompanist:accompanist-permissions:0.21.1-beta'
 
 # Screenshots
 <img src= "(https://user-images.githubusercontent.com/25938149/179392608-39edb602-5663-4e16-a8f8-89e225423575.png" width="200" height="500"/>
-![Screenshot_20220717_025232](https://user-images.githubusercontent.com/25938149/179392608-39edb602-5663-4e16-a8f8-89e225423575.png)
-![Screenshot_20220717_025306](https://user-images.githubusercontent.com/25938149/179392610-431290c4-9d8b-4be0-a90d-b1f64c527b4f.png)
-![Screenshot_20220717_025330](https://user-images.githubusercontent.com/25938149/179392611-641cf443-f6e0-4611-b653-1b4c212dedca.png)
-![Screenshot_20220717_025358](https://user-images.githubusercontent.com/25938149/179392614-10f67f89-8c32-4bcb-9a78-65c59f5cf74d.png)
