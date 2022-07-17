@@ -7,4 +7,5 @@ package io.jetpack.compose.cases.ui.navigation
 sealed class NavRoutes(val route: String) {
     object SplashScreen: NavRoutes("splash_screen")
     object CasesListScreen: NavRoutes("cases_list_screen")
+    object RequestPermissionScreen: NavRoutes("request_permission_screen")
 }

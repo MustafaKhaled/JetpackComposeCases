@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="request_permission_label">Request Permission</string>
+    <string name="permission_granted_msg">Permission is already granted, open your camera.</string>
+    <string name="permission_denied_msg">Permission is denied, Request it for the first time</string>
+    <string name="permission_fully_denied">Permission is denied, go to settings</string>
+    <string name="permission_denied_rationale">Permission is denied, show its importance</string>
+    <string name="go_to_settings_label">Go to Settings</string>
+    <string name="open_camera_label">Open Camera</string>
+</resources>
