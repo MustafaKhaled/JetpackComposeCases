@@ -19,4 +19,4 @@ implementation 'com.google.accompanist:accompanist-permissions:0.21.1-beta'
 
 
 # Screenshots
-<img src="https://user-images.githubusercontent.com/25938149/179379540-e2dd5525-b588-4c2c-8425-8d4cf33341c2.png"  height="350" width="150/>
+<img src= "https://user-images.githubusercontent.com/25938149/179392608-39edb602-5663-4e16-a8f8-89e225423575.png" width="200" height="420"/>
