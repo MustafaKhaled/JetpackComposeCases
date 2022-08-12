@@ -7,6 +7,7 @@ import androidx.navigation.compose.rememberNavController
 import io.jetpack.compose.cases.ui.casesList.CasesListScreen
 import io.jetpack.compose.cases.ui.casesList.casesList
 import io.jetpack.compose.cases.ui.splashscreen.SplashScreen
+import io.jetpack.compose.otp.OtpScreen
 import io.jetpack.compose.permissions.SinglePermissionScreen
 
 /**
@@ -28,5 +29,9 @@ fun Navigation() {
         composable(route = NavRoutes.RequestPermissionScreen.route) {
             SinglePermissionScreen()
         }
+        composable(route = NavRoutes.OtpScreen.route) {
+            OtpScreen()
+        }
+
     }
 }

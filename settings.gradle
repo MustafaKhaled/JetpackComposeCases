@@ -16,3 +16,4 @@ rootProject.name = "JetpackComposeCases"
 include ':app'
 include ':common'
 include ':RequestPermissionScreen'
+include ':otp'
