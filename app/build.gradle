@@ -55,4 +55,5 @@ dependencies {
 
     implementation project(path: ':common')
     implementation project(path: ':RequestPermissionScreen')
+    implementation project(path: ':otp')
 }
