@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusDirection
@@ -26,10 +27,21 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun OtpScreen() {
     val context = LocalContext.current
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .fillMaxHeight()) {
-        OtpTextFields(length = 4, callback = {  Toast.makeText(context,"Text",Toast.LENGTH_LONG).show()} )
+    var enabled: Boolean by remember { mutableStateOf(true)}
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight()
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        OtpTextFields(
+            length = 4,
+            callback = {
+                Toast.makeText(context, "You entered ${it.joinToString()}", Toast.LENGTH_LONG).show()
+                enabled = true
+            }, enabled = enabled,)
     }
 }
 
@@ -37,8 +49,8 @@ fun OtpScreen() {
 @Composable
 fun OtpTextFields(
     length: Int,
-    enabled: Boolean? = true,
-    callback: () -> Unit
+    callback: (CharArray) -> Unit,
+    enabled: Boolean
 ) {
     val code: CharArray by remember { mutableStateOf(CharArray(length)) }
     val focusManager = LocalFocusManager.current
@@ -48,6 +60,7 @@ fun OtpTextFields(
 
         repeat((0 until length).count()) {
             var singleCode: String by remember { mutableStateOf("") }
+            var enabled: Boolean by remember { mutableStateOf(enabled)}
             OutlinedTextField(
                 modifier = Modifier
                     .width(50.dp)
@@ -76,12 +89,13 @@ fun OtpTextFields(
                         code[it] = singleCode.last()
                         focusManager.moveFocus(FocusDirection.Right)
                     }
-                    if (code.all { it.isDigit() })
-                        callback.invoke()
+                    if (code.all { it.isLetterOrDigit() })
+                        callback.invoke(code)
+                        enabled = false
                 },
-                enabled = enabled ?: true,
+                enabled = enabled,
                 keyboardOptions = KeyboardOptions(
-                    keyboardType = KeyboardType.NumberPassword,
+                    keyboardType = KeyboardType.Number,
                     imeAction = ImeAction.Next
                 ),
                 colors = TextFieldDefaults.textFieldColors(
