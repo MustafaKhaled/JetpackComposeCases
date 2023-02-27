@@ -7,7 +7,9 @@ import io.jetpack.compose.cases.ui.navigation.NavRoutes
  */
 val casesList = listOf(
     CaseItem("Single Permission", "Mustafa Khaled", NavRoutes.RequestPermissionScreen.route),
-    CaseItem("Otp", author = "Mustafa Khaled", NavRoutes.OtpScreen.route)
+    CaseItem("Otp", author = "Mustafa Khaled", NavRoutes.OtpScreen.route),
+    CaseItem("Login", author = "Mahmoud Eraqi", NavRoutes.LoginScreen.route)
+
 )
 
 
