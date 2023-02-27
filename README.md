@@ -132,12 +132,14 @@ Once your PR is accepted, your case would be listed in the project, and your nam
 
 # Cases
 [Single Permission](https://github.com/MustafaKhaled/JetpackComposeCases/tree/develop/RequestPermissionScreen)
+[OTP](https://github.com/MustafaKhaled/JetpackComposeCases/tree/develop/otp)
 
 # Authors
 
 List of contributors: 
 
 * [Mustafa Khaled](https://github.com/MustafaKhaled)
+* [Mahmoud Eraqi](https://github.com/MahmoudEraqi95)
 
 # License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
