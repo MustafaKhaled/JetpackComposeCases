@@ -9,4 +9,5 @@ sealed class NavRoutes(val route: String) {
     object CasesListScreen: NavRoutes("cases_list_screen")
     object RequestPermissionScreen: NavRoutes("request_permission_screen")
     object OtpScreen: NavRoutes("otp_screen")
+    object LoginScreen: NavRoutes("login_screen")
 }
